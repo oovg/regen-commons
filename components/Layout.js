@@ -32,7 +32,7 @@ export default function Layout({ children, title = "Regen Commons" }) {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
+    <div className="min-h-screen">
       <Head>
         <title>{title}</title>
         <meta
@@ -42,19 +42,19 @@ export default function Layout({ children, title = "Regen Commons" }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className="">
-        <div className="max-w-5xl mx-auto px-4 py-3">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <Link href="/" className="text-xl font-bold mb-3 md:mb-0">
+      <header className="border-b border-gray-200 dark:border-gray-700">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex justify-between items-center">
+            <Link href="/" className="text-2xl font-bold text-primary">
               Regen Commons
             </Link>
             <div className="flex items-center">
-              <nav className="mr-4">
-                <ul className="flex space-x-4">
+              <nav className="mr-6">
+                <ul className="flex space-x-6">
                   <li>
                     <Link
                       href="/about"
-                      className="hover:opacity-80 transition-opacity"
+                      className="text-text hover:text-primary transition-colors"
                     >
                       About
                     </Link>
@@ -62,15 +62,23 @@ export default function Layout({ children, title = "Regen Commons" }) {
                   <li>
                     <Link
                       href="/projects"
-                      className="hover:opacity-80 transition-opacity"
+                      className="text-text hover:text-primary transition-colors"
                     >
                       Projects
                     </Link>
                   </li>
                   <li>
                     <Link
+                      href="/docs"
+                      className="text-text hover:text-primary transition-colors"
+                    >
+                      Documentation
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
                       href="/contact"
-                      className="hover:opacity-80 transition-opacity"
+                      className="text-text hover:text-primary transition-colors"
                     >
                       Contact
                     </Link>
@@ -79,7 +87,7 @@ export default function Layout({ children, title = "Regen Commons" }) {
               </nav>
               <button
                 onClick={toggleDarkMode}
-                className="p-2 rounded-full bg-accent/20 text-white"
+                className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-text"
                 aria-label={
                   darkMode ? "Switch to light mode" : "Switch to dark mode"
                 }
@@ -91,13 +99,40 @@ export default function Layout({ children, title = "Regen Commons" }) {
         </div>
       </header>
 
-      <main className="max-w-5xl mx-auto px-4 py-8">{children}</main>
+      <main>{children}</main>
 
-      <footer className="bg-primary text-white py-6 mt-8">
-        <div className="max-w-5xl mx-auto px-4 text-center">
-          <p>
-            © {new Date().getFullYear()} Regen Commons. All rights reserved.
-          </p>
+      <footer className="border-t border-gray-200 dark:border-gray-700 py-8 mt-16">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Regen Commons</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Regenerative solutions for a better future. Building sustainable communities and ecosystems.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+              <ul className="space-y-2">
+                <li><Link href="/about" className="text-sm text-accent hover:text-primary">About Us</Link></li>
+                <li><Link href="/projects" className="text-sm text-accent hover:text-primary">Projects</Link></li>
+                <li><Link href="/docs" className="text-sm text-accent hover:text-primary">Documentation</Link></li>
+                <li><Link href="/contact" className="text-sm text-accent hover:text-primary">Contact</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Connect</h3>
+              <ul className="space-y-2">
+                <li><a href="https://twitter.com" className="text-sm text-accent hover:text-primary">Twitter</a></li>
+                <li><a href="https://github.com" className="text-sm text-accent hover:text-primary">GitHub</a></li>
+                <li><a href="https://discord.com" className="text-sm text-accent hover:text-primary">Discord</a></li>
+              </ul>
+            </div>
+          </div>
+          <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700 text-center">
+            <p className="text-sm text-gray-600 dark:text-gray-400">
+              © {new Date().getFullYear()} Regen Commons. All rights reserved.
+            </p>
+          </div>
         </div>
       </footer>
     </div>
