@@ -4,12 +4,13 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: [],
+    unoptimized: true,
   },
-  i18n: {
-    locales: ["en"],
-    defaultLocale: "en",
-  },
+  // i18n is not compatible with output: 'export'
+  // i18n: {
+  //   locales: ["en"],
+  //   defaultLocale: "en",
+  // },
 };
 
 module.exports = nextConfig;

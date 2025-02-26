@@ -6,29 +6,34 @@ export default function Layout({ children, title = "Regen Commons" }) {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
-    // Check user preference
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      setDarkMode(true);
-      document.documentElement.classList.add("dark");
-    } else {
-      setDarkMode(false);
-      document.documentElement.classList.remove("dark");
+    // Check if we're in the browser before accessing localStorage
+    if (typeof window !== 'undefined') {
+      // Check user preference
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        setDarkMode(true);
+        document.documentElement.classList.add("dark");
+      } else {
+        setDarkMode(false);
+        document.documentElement.classList.remove("dark");
+      }
     }
   }, []);
 
   const toggleDarkMode = () => {
-    if (darkMode) {
-      document.documentElement.classList.remove("dark");
-      localStorage.theme = "light";
-    } else {
-      document.documentElement.classList.add("dark");
-      localStorage.theme = "dark";
+    if (typeof window !== 'undefined') {
+      if (darkMode) {
+        document.documentElement.classList.remove("dark");
+        localStorage.theme = "light";
+      } else {
+        document.documentElement.classList.add("dark");
+        localStorage.theme = "dark";
+      }
+      setDarkMode(!darkMode);
     }
-    setDarkMode(!darkMode);
   };
 
   return (
