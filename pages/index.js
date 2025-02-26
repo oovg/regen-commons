@@ -58,8 +58,25 @@ export default function Home() {
       <section className="py-16 border-b border-gray-200 dark:border-gray-700">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6">Links</h2>
-            <p className="text-lg mb-6">List of links to resources.</p>
+            <h2 className="text-3xl font-bold mb-6">Resources</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <a href="https://discord.gg/regen" className="card hover:shadow-md">
+                <h3 className="text-xl font-semibold mb-2">Discord</h3>
+                <p className="text-gray-600 dark:text-gray-400">Join our community Discord server to connect with other regenerative practitioners.</p>
+              </a>
+              <a href="https://github.com/regen-network" className="card hover:shadow-md">
+                <h3 className="text-xl font-semibold mb-2">GitHub</h3>
+                <p className="text-gray-600 dark:text-gray-400">Explore our open source code and contribute to our projects.</p>
+              </a>
+              <a href="https://twitter.com/regen_network" className="card hover:shadow-md">
+                <h3 className="text-xl font-semibold mb-2">Twitter</h3>
+                <p className="text-gray-600 dark:text-gray-400">Follow us for the latest updates and announcements.</p>
+              </a>
+              <a href="https://medium.com/regen-network" className="card hover:shadow-md">
+                <h3 className="text-xl font-semibold mb-2">Blog</h3>
+                <p className="text-gray-600 dark:text-gray-400">Read our latest articles and thought pieces on regeneration.</p>
+              </a>
+            </div>
           </div>
         </div>
       </section>
