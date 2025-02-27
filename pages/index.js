@@ -1,14 +1,20 @@
 import Layout from "../components/Layout";
-import Link from "next/link";
+import { Link, Image } from "next/link";
 
 export default function Home() {
   return (
     <Layout title="Regen Commons - Regenerative Solutions for a Better Future">
       {/* Hero Section */}
-      <section className="py-16 md:py-24 border-b border-gray-200 dark:border-gray-700">
+      <section
+        className="py-16 md:py-24 border-b border-gray-200 dark:border-gray-700"
+        style={{
+          backgroundImage: "url(" + "/rc_hero.png" + ")",
+          backgroundSize: "cover",
+        }}
+      >
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-primary">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 ">
               Regen Commons
             </h1>
             <p className="text-xl mb-10">
@@ -17,9 +23,13 @@ export default function Home() {
               the competition.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link href="/projects" className="button">
-                Explore Projects
-              </Link>
+              <a
+                target="_blank"
+                href="https://x.com/gregory_landua/status/1894781218685616444"
+                className="button"
+              >
+                View Announcement
+              </a>
             </div>
           </div>
         </div>
@@ -60,21 +70,38 @@ export default function Home() {
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-6">Resources</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <a href="https://discord.gg/regen" className="card hover:shadow-md">
-                <h3 className="text-xl font-semibold mb-2">Discord</h3>
-                <p className="text-gray-600 dark:text-gray-400">Join our community Discord server to connect with other regenerative practitioners.</p>
+              <a href="#" className="card hover:shadow-md">
+                <h3 className="text-xl font-semibold mb-2">Manifesto</h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Sign the Regen Commons manifesto to show your alignment.
+                </p>
               </a>
-              <a href="https://github.com/regen-network" className="card hover:shadow-md">
+              <a
+                href="https://github.com/oovg/regen-commons"
+                className="card hover:shadow-md"
+              >
                 <h3 className="text-xl font-semibold mb-2">GitHub</h3>
-                <p className="text-gray-600 dark:text-gray-400">Explore our open source code and contribute to our projects.</p>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Explore our open source code and contribute to our projects.
+                </p>
               </a>
-              <a href="https://twitter.com/regen_network" className="card hover:shadow-md">
+              <a
+                href="https://twitter.com/regen_network"
+                className="card hover:shadow-md"
+              >
                 <h3 className="text-xl font-semibold mb-2">Twitter</h3>
-                <p className="text-gray-600 dark:text-gray-400">Follow us for the latest updates and announcements.</p>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Follow us for the latest updates and announcements.
+                </p>
               </a>
-              <a href="https://medium.com/regen-network" className="card hover:shadow-md">
+              <a
+                href="https://medium.com/regen-network"
+                className="card hover:shadow-md"
+              >
                 <h3 className="text-xl font-semibold mb-2">Blog</h3>
-                <p className="text-gray-600 dark:text-gray-400">Read our latest articles and thought pieces on regeneration.</p>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Read our latest articles and thought pieces on regeneration.
+                </p>
               </a>
             </div>
           </div>
@@ -91,9 +118,8 @@ export default function Home() {
             <p className="text-lg mb-6">
               We welcome contributions from anyone interested in regenerative
               practices, and are grateful for even the smallest of efforts! If
-              you'd like to contribute to the Regen Commons platform, please
-              join our community forum, share your ideas, and participate in our
-              open projects.
+              you'd like to contribute to the Regen Commons, please follow the
+              movement, share your ideas, and participate in our open projects.
             </p>
           </div>
         </div>

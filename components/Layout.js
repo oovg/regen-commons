@@ -7,7 +7,7 @@ export default function Layout({ children, title = "Regen Commons" }) {
 
   useEffect(() => {
     // Check if we're in the browser before accessing localStorage
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       // Check user preference
       if (
         localStorage.theme === "dark" ||
@@ -24,7 +24,7 @@ export default function Layout({ children, title = "Regen Commons" }) {
   }, []);
 
   const toggleDarkMode = () => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       if (darkMode) {
         document.documentElement.classList.remove("dark");
         localStorage.theme = "light";
@@ -48,13 +48,13 @@ export default function Layout({ children, title = "Regen Commons" }) {
       </Head>
 
       <header className="border-b border-gray-200 dark:border-gray-700">
-        <div className="container mx-auto px-4 py-4">
+        <div className="container mx-auto px-4 py-20">
           <div className="flex justify-between items-center">
             <Link href="/" className="text-2xl font-bold text-primary">
               Regen Commons
             </Link>
             <div className="flex items-center">
-              <nav className="mr-6">
+              {/* <nav className="mr-6">
                 <ul className="flex space-x-6">
                   <li>
                     <Link
@@ -89,7 +89,7 @@ export default function Layout({ children, title = "Regen Commons" }) {
                     </Link>
                   </li>
                 </ul>
-              </nav>
+              </nav> */}
               <button
                 onClick={toggleDarkMode}
                 className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-text"
@@ -112,24 +112,74 @@ export default function Layout({ children, title = "Regen Commons" }) {
             <div>
               <h3 className="text-lg font-semibold mb-4">Regen Commons</h3>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                Regenerative solutions for a better future. Building sustainable communities and ecosystems.
+                Regenerative solutions for a better future. Building sustainable
+                communities and ecosystems.
               </p>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2">
-                <li><Link href="/about" className="text-sm text-accent hover:text-primary">About Us</Link></li>
-                <li><Link href="/projects" className="text-sm text-accent hover:text-primary">Projects</Link></li>
-                <li><Link href="/docs" className="text-sm text-accent hover:text-primary">Documentation</Link></li>
-                <li><Link href="/contact" className="text-sm text-accent hover:text-primary">Contact</Link></li>
+                <li>
+                  <Link
+                    href="/about"
+                    className="text-sm text-accent hover:text-primary"
+                  >
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/projects"
+                    className="text-sm text-accent hover:text-primary"
+                  >
+                    Projects
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/docs"
+                    className="text-sm text-accent hover:text-primary"
+                  >
+                    Documentation
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/contact"
+                    className="text-sm text-accent hover:text-primary"
+                  >
+                    Contact
+                  </Link>
+                </li>
               </ul>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-4">Connect</h3>
               <ul className="space-y-2">
-                <li><a href="https://twitter.com" className="text-sm text-accent hover:text-primary">Twitter</a></li>
-                <li><a href="https://github.com" className="text-sm text-accent hover:text-primary">GitHub</a></li>
-                <li><a href="https://discord.com" className="text-sm text-accent hover:text-primary">Discord</a></li>
+                <li>
+                  <a
+                    href="https://twitter.com"
+                    className="text-sm text-accent hover:text-primary"
+                  >
+                    Twitter
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://github.com"
+                    className="text-sm text-accent hover:text-primary"
+                  >
+                    GitHub
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://discord.com"
+                    className="text-sm text-accent hover:text-primary"
+                  >
+                    Discord
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
