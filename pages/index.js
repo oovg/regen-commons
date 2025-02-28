@@ -30,6 +30,13 @@ export default function Home() {
               >
                 View Announcement
               </a>
+              <a
+                target="_blank"
+                href="https://regencommons.discourse.group/"
+                className="button"
+              >
+                Go to Forum
+              </a>
             </div>
           </div>
         </div>
@@ -70,8 +77,11 @@ export default function Home() {
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-6">Resources</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <a href="#" className="card hover:shadow-md">
-                <h3 className="text-xl font-semibold mb-2">Manifesto</h3>
+              <a
+                href="https://regencommons.discourse.group/"
+                className="card hover:shadow-md"
+              >
+                <h3 className="text-xl font-semibold mb-2">Forum</h3>
                 <p className="text-gray-600 dark:text-gray-400">
                   Sign the Regen Commons manifesto to show your alignment.
                 </p>
@@ -82,7 +92,7 @@ export default function Home() {
               >
                 <h3 className="text-xl font-semibold mb-2">GitHub</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Explore our open source code and contribute to our projects.
+                  Explore our open source code and contribute.
                 </p>
               </a>
               <a
